@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.global.js"></script>
+    <script defer src="client.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="relative">
+            <img class="map" @click="getWeather($event); positionCursor($event);" src="mapBig.jpg" alt="Map of the US">
+            <!-- TODO: Get a visual indicator of where they clicked. -->
+            <img class="arrow" src="arrow.svg" width="30" alt="arrow marker">
+        </div>
+        <p>{{message}}</p>
+    </div>
+</body>
+</html>
