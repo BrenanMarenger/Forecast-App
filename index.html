@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,13 @@
     <script defer src="client.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="app">
         <div class="relative">
             <img class="map" @click="getWeather($event); positionCursor($event);" src="mapBig.jpg" alt="Map of the US">
-            <img v-if="clickX && clickY" class="arrow" v-bind:style="pointerCoordinates" src="arrow.svg" width="30" alt="arrow marker">
+            <img v-if="clickX && clickY" class="arrow" v-bind:style="pointerCoordinates" src="arrow.svg" width="30"
+                alt="arrow marker">
         </div>
         <div>
             <p>{{message}}</p>
@@ -24,10 +27,12 @@
                     <img v-bind:src="f.icon" alt="Icon of weather">
                 </p>
                 <p>
-                    The temperature is {{f.temperature}} and the wind is blowing out of the {{f.windDirection}} at a speed of {{f.windSpeed}}.
+                    {{f.shortForecast}} with a temperature of {{f.temperature}} and the wind is blowing out of the
+                    {{f.windDirection}} at a speed of {{f.windSpeed}}.
                 </p>
             </div>
         </div>
     </div>
 </body>
+
 </html>
