@@ -1,0 +1,21 @@
+
+.relative {
+    /* This makes it so children in this container can set
+    position: absolute relative to the parent. */
+    position: relative;
+    width: 852px;
+    height: 510px;
+}
+
+.map {
+    display: block; /* Gets rid of extra space */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.arrow {
+    position: absolute;
+}
+
